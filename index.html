@@ -40,8 +40,8 @@
     const btnB = document.getElementById("btnB");
     let currentStyle = "A";
     const imgA = new Image(); const imgB = new Image();
-    imgA.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001a.png?v=3";
-    imgB.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001b.png?v=3";
+    imgA.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001a.png?v=4";
+    imgB.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001b.png?v=4";
     imgA.onerror = () => console.warn("001a.png failed to load");
     imgB.onerror = () => console.warn("001b.png failed to load");
     btnA.onclick = () => { currentStyle = "A"; btnA.classList.add("active"); btnB.classList.remove("active"); };
@@ -67,7 +67,7 @@
             const faceWidth = Math.abs(right.x - left.x) * canvas.width;
             const faceHeight = Math.abs(chin.y - forehead.y) * canvas.height;
             const cx = (left.x + right.x) / 2 * canvas.width;
-            const cy = (forehead.y + chin.y) / 2 * canvas.height + (currentStyle === "B" ? -faceHeight * 0.05 : -faceHeight * 0.22);
+            const cy = (forehead.y + chin.y) / 2 * canvas.height + (currentStyle === "B" ? -faceHeight * 0.35 : -faceHeight * 0.45);
             const size = Math.max(faceWidth, faceHeight) * (currentStyle === "B" ? 1.495 : 1.6675);
             let rotY = 0, rotX = 0;
             if (matrix) {
