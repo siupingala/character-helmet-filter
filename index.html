@@ -40,8 +40,8 @@
     const btnB = document.getElementById("btnB");
     let currentStyle = "A";
     const imgA = new Image(); const imgB = new Image();
-    imgA.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001a.png";
-    imgB.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001b.png";
+    imgA.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001a.png?v=2";
+    imgB.src = "https://raw.githubusercontent.com/siupingala/character-helmet-filter/main/001b.png?v=2";
     imgA.onerror = () => console.warn("001a.png failed to load");
     imgB.onerror = () => console.warn("001b.png failed to load");
     btnA.onclick = () => { currentStyle = "A"; btnA.classList.add("active"); btnB.classList.remove("active"); };
