@@ -67,7 +67,7 @@
             const cy = (forehead.y + chin.y) / 2 * canvas.height;
             const faceWidth = Math.abs(right.x - left.x) * canvas.width;
             const faceHeight = Math.abs(chin.y - forehead.y) * canvas.height;
-            const size = Math.max(faceWidth, faceHeight) * (currentStyle === "B" ? 2.16 : 2.4);
+            const size = Math.max(faceWidth, faceHeight) * (currentStyle === "B" ? 1.728 : 1.92);
             let rotY = 0, rotX = 0;
             if (matrix) {
               rotY = Math.atan2(matrix.data[8], matrix.data[0]) * 0.55;
