@@ -64,10 +64,10 @@
             const landmarks = results.faceLandmarks[0];
             const matrix = results.facialTransformationMatrixes?.[0];
             const forehead = landmarks[10], chin = landmarks[152], left = landmarks[234], right = landmarks[454];
-            const cx = (left.x + right.x) / 2 * canvas.width;
-            const cy = (forehead.y + chin.y) / 2 * canvas.height + (currentStyle === "B" ? faceHeight * 0.18 : -faceHeight * 0.08);
             const faceWidth = Math.abs(right.x - left.x) * canvas.width;
             const faceHeight = Math.abs(chin.y - forehead.y) * canvas.height;
+            const cx = (left.x + right.x) / 2 * canvas.width;
+            const cy = (forehead.y + chin.y) / 2 * canvas.height + (currentStyle === "B" ? faceHeight * 0.18 : -faceHeight * 0.08);
             const size = Math.max(faceWidth, faceHeight) * (currentStyle === "B" ? 1.495 : 1.6675);
             let rotY = 0, rotX = 0;
             if (matrix) {
